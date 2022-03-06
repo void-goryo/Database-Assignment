@@ -6,12 +6,6 @@ conn = sqlite3.connect('test.db')   #create database
 fileList = ('information.docx', 'Hello.txt', 'myImage.png', \
             'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg')
 
-with conn:  #reset
-    cur = conn.cursor()
-    cur.execute('DROP TABLE tbl_assignment')
-    conn.commit
-conn.close
-
 with conn:
     cur = conn.cursor() #control through commands
 
